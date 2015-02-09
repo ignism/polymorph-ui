@@ -1,0 +1,100 @@
+@import "colors";
+@import "syntax-variables";
+
+@text-color: @foreground-shade-one;
+@text-color-subtle: @foreground-shade-two;
+@text-color-highlight: @foreground-shade-three;
+@text-color-selected: @text-color-highlight;
+
+@text-color-info: @git-color-info;
+@text-color-success: @git-color-success;
+@text-color-warning: @git-color-warning;
+@text-color-error: @git-color-error;
+
+@text-color-ignored: @text-color-subtle;
+@text-color-added: @text-color-success;
+@text-color-renamed: @text-color-info;
+@text-color-modified: @text-color-warning;
+@text-color-removed: @text-color-error;
+
+@background-color-info: @text-color-info; //mix(@background-shade-one, @git-color-info, 56%);
+@background-color-success: @text-color-success; // mix(@background-shade-one, @git-color-success, 56%);
+@background-color-warning: @text-color-warning; //mix(@background-shade-one, @git-color-warning, 56%);
+@background-color-error: @text-color-error; //mix(@background-shade-one, @git-color-error, 56%);
+@background-color-highlight: @background-shade-five;
+@background-color-selected: @background-shade-six;
+
+@app-background-color: @background-shade-three;
+
+@base-background-color: @background-shade-one;
+@base-border-color: @background-shade-four;
+
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color: rgba(0, 0, 0, 0.5);
+
+@input-background-color: @base-background-color;
+@input-border-color: @base-border-color;
+
+@tool-panel-background-color: @base-background-color;
+@tool-panel-border-color: @base-border-color;
+
+@inset-panel-background-color: @base-background-color;
+@inset-panel-border-color: @base-border-color;
+
+@panel-heading-background-color: #43484d;
+@panel-heading-border-color: fadein(@base-border-color, 10%);
+
+@overlay-background-color: @base-background-color;
+@overlay-border-color: lighten(@base-background-color, 12%);
+
+@button-background-color: @background-shade-four;
+@button-background-color-hover: @background-shade-five;
+@button-background-color-selected: darken(@button-background-color, 5%);
+@button-border-color: @background-shade-two;
+
+@tab-bar-background-color: @background-shade-four;
+@tab-bar-border-color: rgb(170, 169, 170); //@base-background-color;
+@tab-background-color: @tab-bar-background-color;
+@tab-background-color-active: @base-background-color;
+@tab-border-color: transparent;
+
+@tree-view-background-color: @app-background-color;
+@tree-view-border-color: @base-background-color;
+
+@scrollbar-background-color: #222425; // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: rgba(92, 92, 92, 0.5);
+
+@ui-site-color-1: @background-color-success; // green
+@ui-site-color-2: @background-color-info; // blue
+@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-4: #db2ff4; // purple
+@ui-site-color-5: #f5e11d; // yellow
+
+
+// Sizes
+
+@font-size: 12px;
+@input-font-size: @font-size;
+
+@disclosure-arrow-size: 12px;
+
+@component-padding: 12px;
+@component-icon-padding: 5px;
+@component-icon-size: 16px;
+@component-line-height: 24px;
+@component-border-radius: 4px;
+
+@tab-height: 32px;
+
+
+// Other
+
+@font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+
+// Custom
+
+@tooltip-background-color: @background-color-info;
+@gutter-background-color: @background-shade-two;
+@gutter-background-color-selection: @foreground-shade-four;
+@tab-bar-height: @tab-height + @component-padding;

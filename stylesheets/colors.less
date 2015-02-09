@@ -1,0 +1,32 @@
+@import "syntax-variables";
+
+@ui-theme-color: @syntax-background-color;
+
+@git-color-info: @syntax-color-renamed;
+@git-color-success: @syntax-color-added;
+@git-color-warning: @syntax-color-modified;
+@git-color-error: @syntax-color-removed;
+
+@foreground-shade-one: desaturate(@syntax-text-color, 24%);
+@foreground-shade-two: darken(@foreground-shade-one, 12%);
+@foreground-shade-three: lighten(@foreground-shade-one, 12%);
+@foreground-shade-four: @syntax-selection-color;
+
+@background-shade-one: @ui-theme-color;
+@background-shade-two: desaturate(mix(@foreground-shade-one, @background-shade-one, 6%), 2%);
+@background-shade-three: desaturate(mix(@foreground-shade-one, @background-shade-one, 12%), 2%);
+@background-shade-four: desaturate(mix(@foreground-shade-one, @background-shade-one, 24%), 2%);
+@background-shade-five: desaturate(mix(@foreground-shade-one, @background-shade-one, 32%), 2%);
+@background-shade-six: @background-shade-one;
+
+//@background-shade-one: @ui-theme-color;
+//@background-shade-two: @syntax-gutter-background-color;
+//@background-shade-three: @syntax-gutter-background-color;
+//@background-shade-four: @syntax-gutter-background-color-selected;
+//@background-shade-five: lighten(@background-shade-four, 5%);
+//@background-shade-six: @background-shade-one;
+
+// @syntax-gutter-text-color: @very-light-gray;
+// @syntax-gutter-text-color-selected: @syntax-gutter-text-color;
+// @syntax-gutter-background-color: @dark-gray;
+// @syntax-gutter-background-color-selected: @gray;

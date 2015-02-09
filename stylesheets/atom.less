@@ -1,0 +1,72 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: @app-background-color;
+  color: @text-color-subtle;
+}
+
+atom-workspace {
+  background-color: transparent;
+}
+
+atom-notifications {
+  margin-top: @tab-bar-height;
+
+  atom-notification {
+    .close {
+      opacity: 1.0;
+      color: @background-color-error;
+    }
+
+    .content {
+      border: 1px solid @background-color-error;
+    }
+  }
+}
+
+status-bar {
+  background-color: @tab-bar-background-color;
+  height: @component-line-height;
+  line-height: @component-line-height;
+}
+
+.settings-view .editor-container atom-text-editor[mini], .settings-view .editor-container atom-text-editor[mini]::shadow, .settings-view .editor-container atom-text-editor[mini].is-focused, .settings-view .editor-container atom-text-editor[mini].is-focused::shadow {
+  color: #333333;
+  background-color: #fff;
+}
+
+.background-tips li {
+  .text(subtle);
+  text-shadow: 0 2px @base-background-color;
+  font-size: 0.5em;
+}
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  /deep/ ::-webkit-scrollbar-track,
+  /deep/ ::-webkit-scrollbar-corner {
+    transition: background 800ms linear;
+    background: transparent;
+
+    &:hover {
+      background: @scrollbar-background-color;
+    }
+  }
+
+  /deep/ ::-webkit-scrollbar-thumb {
+    background: @scrollbar-color;
+    border-radius: @component-border-radius;
+    &:hover {
+      background: @background-color-highlight;
+    }
+  }
+}

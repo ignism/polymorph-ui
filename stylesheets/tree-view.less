@@ -1,0 +1,117 @@
+@import "ui-variables";
+@import "ui-mixins";
+
+.tree-view, .tree-view-scroller {
+  .text(normal);
+  background-color: @tree-view-background-color;
+}
+
+atom-workspace {
+  .tree-view-resizer {
+    padding-top: @tab-bar-height;
+    background-color: @tree-view-background-color;
+    border-right: 1px solid @base-border-color;
+  }
+
+  .tree-view {
+    padding: 0;
+
+    & > .directory > .header {
+      background-color: @tab-bar-background-color;
+      border-top: 1px solid @tab-bar-border-color;
+      line-height: @tab-height;
+      height: @tab-bar-height;
+      padding-top: @component-padding;
+      padding-left: @component-padding;
+      position: fixed;
+      top: @tab-height;
+      width: 100%;
+      margin-top: -@tab-height;
+      color: @text-color;
+      & .name {
+        font-weight: 400;
+      }
+    }
+
+    & .directory {
+      .text(normal);
+
+      &.status-added { .text(success); }
+      &.status-ignored { .text(subtle); }
+      &.status-modified { .text(info); }
+      &.status-removed { .text(error); }
+      &.status-renamed { .text(warning); }
+      &.selected {
+        .text(selected);
+        
+        &:before {
+          background-color: @background-color-selected;
+        }
+      }
+    }
+
+    .header.list-item {
+      transition: color 200ms linear, background 200ms linear;
+
+      &:hover {
+        color: @text-color-highlight;
+      }
+    }
+
+    .entry.list-item {
+      .text(normal);
+      transition: color 0.2s;
+
+      &.status-added { .text(success); }
+      &.status-ignored { .text(subtle); }
+      &.status-modified { .text(info); }
+      &.status-removed { .text(error); }
+      &.status-renamed { .text(warning); }
+
+      & > span, & > .name {
+        position: relative;
+        z-index: 2001;
+      }
+      &:before {
+        transition: color 200ms linear, background 200ms linear;
+        content: '';
+        position: absolute;
+        left: -100%;
+        right: 0;
+        height: @component-line-height !important;
+        width: 200%;
+        z-index: 1003;
+      }
+      &:hover {
+        color: @text-color-highlight;
+        &:before {
+          background-color: @background-color-highlight;
+          left: -100%;
+          right: 0;
+          height: @component-line-height !important;
+          width: 200%;
+        }
+      }
+
+      &.selected {
+        color: @text-color-selected;
+        &:before {
+          background-color: @background-color-selected;
+        }
+      }
+    }
+  }
+}
+
+.focusable-panel {
+  opacity: 1;
+
+  &:focus {
+    .selected > .name,
+    .selected > .name:before,
+    .selected > .list-item > .name,
+    .selected > .list-item > .name:before {
+      color: @text-color-selected !important;
+    }
+  }
+}
