@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "polymorph-ui:toggle"
   },
-  "repository": "https://github.com/atom/polymorph-ui",
+  "repository": "https://github.com/ignism/polymorph-ui",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
