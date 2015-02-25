@@ -7,16 +7,16 @@
 @git-color-warning: @syntax-color-modified;
 @git-color-error: @syntax-color-removed;
 
-@foreground-shade-one: desaturate(@syntax-text-color, 24%);
-@foreground-shade-two: darken(@foreground-shade-one, 12%);
-@foreground-shade-three: lighten(@foreground-shade-one, 12%);
+@foreground-shade-one: @syntax-text-color;
+@foreground-shade-two: mix(@foreground-shade-one, @background-shade-one, 72%);
+@foreground-shade-three: mix(@foreground-shade-one, @syntax-selection-color, 64%);
 @foreground-shade-four: @syntax-selection-color;
 
 @background-shade-one: @ui-theme-color;
 @background-shade-two: desaturate(mix(@foreground-shade-one, @background-shade-one, 6%), 2%);
 @background-shade-three: desaturate(mix(@foreground-shade-one, @background-shade-one, 12%), 2%);
 @background-shade-four: desaturate(mix(@foreground-shade-one, @background-shade-one, 24%), 2%);
-@background-shade-five: desaturate(mix(@foreground-shade-one, @background-shade-one, 32%), 2%);
+@background-shade-five: desaturate(mix(@foreground-shade-one, @background-shade-one, 18%), 2%);
 @background-shade-six: @background-shade-one;
 
 //@background-shade-one: @ui-theme-color;
