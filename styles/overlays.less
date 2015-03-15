@@ -12,7 +12,6 @@ atom-panel.modal {
   &.select-list {
     box-shadow: 0 !important;
   }
-  
   .select-list ol.list-group,
   &.select-list ol.list-group {
     background-color: @app-background-color;
@@ -101,5 +100,12 @@ atom-panel.modal {
     z-index: -2;
     background: @overlay-backdrop-color;
     transition: all @transition-time;
+  }
+}
+
+//styleguide fix
+.styleguide {
+  atom-panel.modal::after {
+    position: relative;
   }
 }
