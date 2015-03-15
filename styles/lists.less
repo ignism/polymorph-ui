@@ -41,6 +41,12 @@
   height: @component-line-height;
   line-height: @component-line-height;
 
+  &.status-added { .text(success); }
+  &.status-ignored { .text(subtle); }
+  &.status-modified { .text(warning); }
+  &.status-removed { .text(error); }
+  &.status-renamed { .text(info); }
+
   &:not(.header)::before, {
     content: '';
     position: absolute;
