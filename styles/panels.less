@@ -1,0 +1,23 @@
+atom-panel-container {
+  &.right {
+    border-left: 1px solid @base-border-color;
+    margin-top: @tab-bar-height;
+    border-top: 1px solid @base-border-color;
+  }
+  &.bottom {
+    border-top: 1px solid @base-border-color;
+  }
+}
+
+atom-panel {
+  .text(normal);
+  
+  &.top, &.bottom, &.left, &.right {
+    background: @app-background-color !important;
+  }
+}
+
+.focusable-panel {
+  padding: @component-padding;
+  background: @app-background-color;
+}

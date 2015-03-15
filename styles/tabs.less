@@ -1,0 +1,95 @@
+.tab-bar {
+  height: @tab-bar-height + 1px;
+  background: @tab-bar-background-color;
+  border-bottom: 1px solid @base-border-color;
+  z-index: 1002;
+
+  .tab {
+    .text(normal);
+    transition: background @transition-time;
+    height: @tab-height;
+    line-height: @tab-height;
+    margin-top: @component-padding + 1px;
+    background: @tab-background-color;
+    border: 1px solid @tab-border-color;
+    border-bottom: 1px solid transparent;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-top-right-radius: @component-border-radius;
+    border-top-left-radius: @component-border-radius;
+    &:first-child {
+      margin-left: @component-padding;
+      padding-left: @component-padding;
+    }
+    &:last-child {
+      margin-right: @component-padding;
+      padding-right: @component-padding;
+    }
+    &:hover {
+      background: @button-background-color-hover;
+      .text(highlight);
+      .close-icon {
+        display: block;
+      }
+    }
+    &.modified {
+      &:not(:hover) .close-icon {
+        color: @text-color-modified;
+        border-color: @text-color-modified;
+        display: block;
+        right: 12px;
+        top: 12px;
+        width: 8px;
+        height: 8px;
+        border-width: 1px;
+      }
+      &:hover .close-icon {
+        color: @text-color-modified;
+        border-color: @text-color-modified;
+      }
+    }
+    &.active {
+      .text(highlight);
+      background: @tab-background-color-active;
+
+      .title::before {
+        color: @text-color-highlight;
+      }
+
+      .close-icon {
+        display: block;
+        &:hover {
+          color: @text-color-highlight;
+          background-color: @tab-bar-background-color;
+        }
+      }
+    }
+
+    .close-icon {
+      transition: color @transition-time linear, background @transition-time linear;
+      .text(normal);
+      position:absolute;
+      top:9px;
+      right:8px;
+      height:16px;
+      width:16px;
+      border-radius: 2px;
+      display: none;
+
+      &:before {
+        content:'✕';
+        position:absolute;
+        top: 2px;
+        right: 1px;
+        width:12px;
+        height:12px;
+      }
+
+      &:hover {
+        color: @text-color-highlight;
+        background-color: @app-background-color;
+      }
+    }
+  }
+
+}

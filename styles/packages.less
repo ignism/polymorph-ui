@@ -1,0 +1,28 @@
+atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area,
+atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
+  background-color: @cursor-line-color;
+  opacity: 1.0;
+}
+
+#ColorPicker {
+  background: @overlay-background-color !important;
+  border-radius: @component-border-radius;
+  box-shadow: 0 2px 12px 1px @ui-shadow-color;
+}
+
+.ColorPicker-picker {
+  background: @overlay-background-color !important;
+  border-radius: 0 0 @component-border-radius @component-border-radius !important;
+  box-shadow: none !important;
+}
+.ColorPicker-color {
+  border-radius: @component-border-radius @component-border-radius 0 0 !important;
+}
+.ColorPicker-saturationSelectorWrapper::after,
+.ColorPicker-alphaSelectorWrapper::after,
+.ColorPicker-hueSelectorWrapper::after {
+  border: 1px solid @base-border-color !important;
+}
+.is--pointer .ColorPicker-value:after {
+  color: @text-color;
+}

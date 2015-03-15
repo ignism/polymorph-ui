@@ -1,0 +1,69 @@
+.list-group .list-item > *,
+.list-tree .list-item > * {
+  position: relative;
+}
+
+.select-list.popover-list {
+  background: @overlay-background-color;
+  padding: @component-padding/2 0 @component-padding/2 0;
+  box-shadow: 0 2px 12px 1px @ui-shadow-color;
+  border-radius: @component-border-radius;
+  atom-text-editor[mini] {
+    margin-bottom: @component-padding;
+  }
+  .list-group li > * {
+    position: relative;
+  }
+  .list-group li {
+    transition: background @transition-time;
+    padding: 0 @component-padding*2 0 @component-padding*2;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: @component-line-height;
+      transition: background @transition-time;
+    }
+    &:hover {
+      color: @text-color-highlight;
+      &::before {
+        background: @background-color-highlight;
+      }
+    }
+  }
+}
+
+.list-item {
+  .text(normal);
+  transition: background @transition-time;
+  background: transparent;
+  height: @component-line-height;
+  line-height: @component-line-height;
+
+  &.status-added { .text(success); }
+  &.status-ignored { .text(subtle); }
+  &.status-modified { .text(info); }
+  &.status-removed { .text(error); }
+  &.status-renamed { .text(warning); }
+
+  &:not(.header)::before, {
+    content: '';
+    position: absolute;
+    left: -50%;
+    right: 0;
+    width: 200%;
+    height: @component-line-height;
+    transition: background @transition-time;
+  }
+  &:hover {
+    color: @text-color-highlight;
+    &:not(.header)::before {
+      background: @background-color-highlight;
+    }
+  }
+  &.selected {
+    transition: color @transition-time linear;
+    color: @text-color-selected;
+  }
+}

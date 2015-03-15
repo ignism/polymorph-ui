@@ -1,0 +1,39 @@
+{
+  "name": "polymorph-ui",
+  "theme": "ui",
+  "main": "./lib/polymorph-ui",
+  "version": "0.2.0",
+  "description": "A short description of your package",
+  "activationCommands": {
+    "atom-workspace": "polymorph-ui:toggle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ignism/polymorph-ui"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# polymorph-ui package\n\nA shapeshifting interface! The UI adapts to your current syntax. It began as an experiment within graphite-ui, but I chose to make a different package for it.\n\n### Features\n\n* Flexible UI - The UI will search for colors within \"syntax-variables.less\", it will then use these colros to calculate the UI colors.\n* Works with light and dark syntax colors.\n\n![Atom Dark](http://i.imgur.com/s8jUg5B.png)\n![Atom Light](http://i.imgur.com/zTi0MgZ.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/ignism/polymorph-ui/issues"
+  },
+  "homepage": "https://github.com/ignism/polymorph-ui",
+  "_id": "polymorph-ui@0.1.2",
+  "_shasum": "c1fd501355335363aa5dc2fd9c7588d16b3e7574",
+  "_resolved": "file:../d-11519-3108-151kag0/package.tgz",
+  "_from": "../d-11519-3108-151kag0/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

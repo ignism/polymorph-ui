@@ -1,0 +1,40 @@
+atom-workspace {
+  .tree-view-resizer {
+    padding-top: @tab-bar-height;
+    background-color: @tree-view-background-color;
+  }
+
+  .tree-view-scroller {
+    border-right: 1px solid @base-border-color;
+  }
+
+  .tree-view {
+    padding-left: 0;
+    & .directory {
+      &::before {
+        display: none!important;
+      }
+    }
+    & > .directory {
+      &::before {
+        display: none!important;
+      }
+      & > .header {
+        border-bottom: 1px solid @base-border-color;
+        line-height: @tab-height;
+        width: 100%;
+        height: @tab-height + 8px;
+        padding-top: 8px;
+        position: fixed;
+        top: @tab-height + 1px;
+        z-index: 1001;
+        margin-top: -@tab-height;
+        font-weight: bold;
+        color: @text-color-highlight;
+        &::before {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "ui-variables";
+
+
+// TEXT ------------------------------------------------------------------------
+.text(normal) {
+  color: @text-color;
+  font-size: @font-size;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.text(subtle) {
+  color: @text-color-subtle;
+  font-size: @font-size;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.text(highlight) {
+  color: @text-color-highlight;
+  font-size: @font-size;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+.text(selected) {
+  .text(highlight)
+}
+
+.text(info) {
+  .text(highlight);
+  color: @text-color-info;
+}
+.text(success) {
+  .text(highlight);
+  color: @text-color-success;
+}
+.text(warning) {
+  .text(highlight);
+  color: @text-color-warning;
+}
+.text(error) {
+  .text(highlight);
+  color: @text-color-error;
+}
+
+// BUTTONS ---------------------------------------------------------------------
+.button(@color, @hover-color, @selected-color) {
+  .text(normal);
+  border: 1px solid @button-border-color !important;
+  background: @color;
+  height: @component-line-height;
+  line-height: @component-line-height;
+  transition: background @transition-time ease;
+  border-radius: @component-border-radius;
+  box-shadow:0 0.5px 0 0 @ui-shadow-color;
+
+  &:focus {
+    outline: none;
+  }
+  &:focus,
+  &:hover {
+    .text(highlight);
+    background: @hover-color;
+    box-shadow:0 0.5px 0 0 @ui-shadow-color !important;
+  }
+  &:active {
+    background: darken(@color, 4%);
+  }
+  &.selected {
+    background: @selected-color;
+  }
+  &.selected:focus,
+  &.selected:hover {
+    //background-color: lighten(@selected-color, 2%);
+  }
+}
