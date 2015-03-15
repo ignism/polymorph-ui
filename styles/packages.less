@@ -1,9 +1,11 @@
+// minimap
 atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area,
 atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
   background-color: @cursor-line-color;
   opacity: 1.0;
 }
 
+// color-picker
 #ColorPicker {
   background: @overlay-background-color !important;
   border-radius: @component-border-radius;
@@ -27,6 +29,23 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
   color: @text-color;
 }
 
+// git-control
 .git-control {
   background: @base-background-color;
+
+  .sidebar {
+    background: @gutter-background-color;
+  }
+
+  .logger pre {
+    border-color: @base-border-color !important;
+  }
+
+  .dialog {
+    background: @overlay-background-color;
+  }
+
+  .icon.x:before, .icon.file-deleted:before {
+    content: '✕';
+  }
 }
