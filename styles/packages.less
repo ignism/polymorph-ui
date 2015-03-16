@@ -50,3 +50,31 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
     content: '✕';
   }
 }
+
+//depracation-cop
+.deprecation-cop {
+  background: @base-background-color !important;
+
+  .list-item {
+    .text(normal);
+    transition: none;
+    background: transparent;
+    height: inherit;
+    line-height: inherit;
+
+    &::before, {
+      background: transparent;
+      transition: none;
+    }
+
+    &:hover {
+      color: @text-color-highlight;
+      &:not(.header)::before {
+        background: transparent;
+      }
+    }
+    &.selected::before {
+      content: inherit;
+    }
+  }
+}
