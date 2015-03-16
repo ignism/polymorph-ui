@@ -65,12 +65,22 @@
     background: darken(@color, 4%);
   }
   &.selected {
+    .text(selected);
     background: @selected-color;
   }
   &.selected:focus,
   &.selected:hover {
     //background-color: lighten(@selected-color, 2%);
   }
+}
+
+.button-variant (@color) {
+  @bg: @color;
+  @hover: mix(@base-background-color, @color, 40%);
+  @selected: @base-background-color;
+  .button(@bg, @hover, @selected);
+  color: @base-background-color;
+  border-color: @color !important;
 }
 
 // BOX SHADOW ------------------------------------------------------------------

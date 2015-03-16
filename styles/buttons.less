@@ -1,6 +1,22 @@
 // Buttons
 .btn {
   .button(@button-background-color, @button-background-color-hover, @button-background-color-selected);
+
+  &.btn-primary {
+    .button-variant(@background-color-info);
+  }
+  &.btn-info {
+    .button-variant(@background-color-info);
+  }
+  &.btn-success {
+    .button-variant(@background-color-success);
+  }
+  &.btn-warning {
+    .button-variant(@background-color-warning);
+  }
+  &.btn-error {
+    .button-variant(@background-color-error);
+  }
 }
 
 .btn:active,
