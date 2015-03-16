@@ -14,3 +14,13 @@ atom-workspace {
 label {
   .text(normal);
 }
+
+atom-notifications {
+  z-index: 2001;
+
+  atom-notification {
+    .close.icon::before {
+      content:'✕';
+    }
+  }
+}
