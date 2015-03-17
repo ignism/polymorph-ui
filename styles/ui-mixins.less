@@ -4,24 +4,21 @@
 // TEXT ------------------------------------------------------------------------
 .text(normal) {
   color: @text-color;
+  font-family: @font-family;
   font-size: @font-size;
   font-weight: 300;
   letter-spacing: 0.04em;
 }
 .text(subtle) {
+  .text(normal);
   color: @text-color-subtle;
-  font-size: @font-size;
-  font-weight: 300;
-  letter-spacing: 0.04em;
 }
 .text(highlight) {
+  .text(normal);
   color: @text-color-highlight;
-  font-size: @font-size;
-  font-weight: 300;
-  letter-spacing: 0.04em;
 }
 .text(selected) {
-  .text(highlight)
+  .text(highlight);
 }
 
 .text(info) {
