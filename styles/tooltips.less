@@ -1,0 +1,47 @@
+.tooltip {
+  white-space: nowrap;
+
+  .keystroke {
+    font-family: @font-family;
+    font-size: @font-size;
+    color: @text-color-highlight;
+    padding-left: 2px;
+  }
+
+  &.in { opacity: 1; }
+
+  .tooltip-inner {
+    line-height: @component-line-height;
+    border-radius: @component-border-radius;
+    background-color: @base-accent-color;
+    .text(info);
+    white-space: nowrap;
+    max-width: none;
+    .box-shadow(@ui-shadow-color);
+  }
+
+  &.top .tooltip-arrow {
+    border-top-color: @base-accent-color;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @base-accent-color;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @base-accent-color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @base-accent-color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @base-accent-color;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @base-accent-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @base-accent-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @base-accent-color;
+  }
+}
