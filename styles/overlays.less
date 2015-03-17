@@ -26,24 +26,48 @@ atom-panel.modal {
 
     li {
       padding: 0 @component-padding;
-      border-bottom: 1px solid @overlay-border-color;
       width: 100%;
       height: @component-line-height + @component-padding;
       line-height: @component-line-height + @component-padding;
+      border-bottom: 1px solid @overlay-background-color;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+      & > * {
+        position: relative;
+      }
+
       &::before {
         content: '';
         position: absolute;
         left: 0;
         right: 0;
         transition: background @transition-time;
-        height: @component-line-height + @component-padding;
+        height: @component-line-height + @component-padding - 1px;
         line-height: @component-line-height + @component-padding;
       }
-      &:last-of-type {
-        border-bottom: none;
-      }
-      & > * {
-        position: relative;
+
+      &.two-lines {
+        height: @component-line-height*2 + @component-padding;
+        line-height: @component-line-height;
+        .text(subtle);
+        & > *:first-child {
+          .text(normal);
+        }
+        &:hover > *:first-child,
+        &.selected > *:first-child {
+          color: @text-color-highlight;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          transition: background @transition-time;
+          height: @component-line-height*2 + @component-padding - 1px;
+          line-height: @component-line-height*2 + @component-padding;
+        }
       }
 
       .pull-right {
@@ -58,14 +82,10 @@ atom-panel.modal {
           margin-right: 0;
         }
       }
-      &:hover {
+      &:not(.two-lines):hover,
+      &:not(.two-lines).selected {
         color: @text-color-highlight;
-        &::before {
-          background: @background-color-highlight;
-        }
-      }
-      &.selected {
-        color: @text-color-highlight;
+
         .status.icon {
           color: @text-color-selected;
         }
