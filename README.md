@@ -10,3 +10,7 @@ A shapeshifting interface! The UI adapts to your current syntax colors.
 ![monokai](http://i.imgur.com/DyrExSL.png)
 
 ![atom-light](http://i.imgur.com/ntZrqrV.png)
+
+<!--
+TODO texts, panelheading
+-->

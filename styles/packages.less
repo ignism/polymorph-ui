@@ -9,13 +9,13 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
 #ColorPicker {
   background: @overlay-background-color !important;
   border-radius: @component-border-radius;
-  box-shadow: 0 2px 12px 1px @ui-shadow-color;
+  .overlay-shadow(@ui-shadow-color);
 }
 
 .ColorPicker-picker {
   background: @overlay-background-color !important;
   border-radius: 0 0 @component-border-radius @component-border-radius !important;
-  box-shadow: none !important;
+  box-shadow: 0 !important;
 }
 .ColorPicker-color {
   border-radius: @component-border-radius @component-border-radius 0 0 !important;
@@ -43,7 +43,7 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
 
   .dialog {
     background: @overlay-background-color;
-    .box-shadow(@ui-shadow-color);
+    .overlay-shadow(@ui-shadow-color);
   }
 
   .icon.x:before, .icon.file-deleted:before {

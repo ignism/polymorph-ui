@@ -47,7 +47,7 @@
   line-height: @component-line-height;
   transition: background @transition-time ease;
   border-radius: @component-border-radius;
-  box-shadow:0 0.5px 0 0 @ui-shadow-color;
+  .input-shadow(@color);
 
   &:focus {
     outline: none;
@@ -81,6 +81,10 @@
 }
 
 // BOX SHADOW ------------------------------------------------------------------
-.box-shadow(@color) {
+.overlay-shadow(@color) {
   box-shadow: 0 2px 12px 1px @color;
+}
+
+.input-shadow(@color) {
+  box-shadow:0 0.5px 0 0 @color;
 }
