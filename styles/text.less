@@ -55,30 +55,28 @@ code {
 
 
 .highlight {
-  color: @text-color-highlight;
-  font-weight: bold;
+  .text(highlight)
   text-shadow: none;
   background-color: @background-color-highlight;
-  border-radius: @component-border-radius;
-  padding: 1px 3px;
+  border-radius: @component-border-radius/2;
+  padding: 1px 4px;
 }
 
 .highlight-color(@name, @bg-color, @color) {
   .highlight-@{name} {
+    .text(highlight);
     color: @color;
-    font-weight: bold;
     text-shadow: none;
     background-color: mix(@base-background-color, @bg-color, 56%);
     border-radius: @component-border-radius/2;
-    padding: 1px 2px;
+    padding: 1px 4px;
   }
 }
 .highlight-color(info, @background-color-info, @text-color-info);
 .highlight-color(warning, @background-color-warning, @text-color-warning);
 .highlight-color(error, @background-color-error, @text-color-error);
 .highlight-color(success, @background-color-success, @text-color-success);
-/*
+
 .results-view .path-details.list-item {
-  color: darken(@text-color-highlight, 18%);
+  color: @text-color-highlight;
 }
-*/
