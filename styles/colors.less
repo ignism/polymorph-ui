@@ -1,22 +1,22 @@
 @import "syntax-variables";
 
-@ui-text-color: @syntax-text-color;
-@ui-background-color: @syntax-background-color;
-@ui-selection-color: @syntax-selection-color;
+@ui-text: @syntax-text-color;
+@ui-background: @syntax-background-color;
+@ui-selection: @syntax-selection-color;
 
-@git-color-info: @syntax-color-renamed;
-@git-color-success: @syntax-color-added;
-@git-color-warning: @syntax-color-modified;
-@git-color-error: @syntax-color-removed;
+@color-info: @syntax-color-renamed;
+@color-success: @syntax-color-added;
+@color-warning: @syntax-color-modified;
+@color-error: @syntax-color-removed;
 
-@fg-shade-one: desaturate(mix(@ui-text-color, @ui-background-color, 64%), 12%);
-@fg-shade-two: desaturate(mix(@ui-text-color, @ui-background-color, 48%), 12%);
-@fg-shade-three: desaturate(@ui-text-color, 24%);
-@fg-shade-four: @ui-selection-color;
+@fg-shade-one: desaturate(mix(@ui-text, @ui-background, 64%), 12%);
+@fg-shade-two: desaturate(mix(@ui-text, @ui-background, 48%), 12%);
+@fg-shade-three: desaturate(@ui-text, 24%);
+@fg-shade-four: @ui-selection;
 
-@bg-shade-one: @ui-background-color;
-@bg-shade-two: desaturate(mix(@ui-text-color, @ui-background-color, 4%), 2%);
-@bg-shade-three: desaturate(mix(@ui-text-color, @ui-background-color, 12%), 4%);
-@bg-shade-four:  desaturate(mix(@ui-text-color, @ui-background-color, 24%), 4%);
-@bg-shade-five: desaturate(mix(@ui-text-color, @ui-background-color, 18%), 4%);
-@bg-shade-six: fade(mix(@ui-selection-color, @ui-background-color, 64%), 50%);;
+@bg-shade-one: @ui-background;
+@bg-shade-two: desaturate(mix(@ui-text, @ui-background, 4%), 2%);
+@bg-shade-three: desaturate(mix(@ui-text, @ui-background, 12%), 4%);
+@bg-shade-four:  desaturate(mix(@ui-text, @ui-background, 24%), 4%);
+@bg-shade-five: desaturate(mix(@ui-text, @ui-background, 18%), 4%);
+@bg-shade-six: fade(mix(@ui-selection, @ui-background, 64%), 50%);;

@@ -6,27 +6,28 @@
 @base-accent-color:     mix(@bg-shade-one, @git-color-info, 56%);
 
 // Text Colors -----------------------------------------------------------------
-@text-color: @fg-shade-one;
-@text-color-subtle: @fg-shade-two;
-@text-color-faded: @fg-shade-two;
+@text-color:           @fg-shade-one;
+@text-color-subtle:    @fg-shade-two;
+@text-color-faded:     @fg-shade-two;
 @text-color-highlight: @fg-shade-three;
-@text-color-selected: @text-color-highlight;
+@text-color-selected:  @text-color-highlight;
 
-@text-color-info: @git-color-info;
-@text-color-success: @git-color-success;
-@text-color-warning: @git-color-warning;
-@text-color-error: @git-color-error;
+@text-color-info:    @color-info;
+@text-color-success: @color-success;
+@text-color-warning: @color-warning;
+@text-color-error:   @color-error;
 
-@text-color-ignored: @text-color-subtle;
-@text-color-added: @text-color-success;
-@text-color-renamed: @text-color-info;
+@text-color-ignored:  @text-color-subtle;
+@text-color-added:    @text-color-success;
+@text-color-renamed:  @text-color-info;
 @text-color-modified: @text-color-warning;
-@text-color-removed: @text-color-error;
+@text-color-removed:  @text-color-error;
 
 // Atom colors -----------------------------------------------------------------
-@ui-editor-background-color: @bg-shade-one;
-@app-background-color:       @bg-shade-three;
-@ui-shadow-color: rgba(0, 0, 0, 0.3);
+@ui-background-color: @bg-shade-one;
+@ui-shadow-color:     rgba(0, 0, 0, 0.3);
+
+@app-background-color: @bg-shade-one;
 
 @cursor-color: @text-color-highlight;
 @cursor-line-color: @bg-shade-six;
@@ -36,9 +37,9 @@
 @gutter-background-color:          @bg-shade-two;
 @gutter-background-color-selected: @bg-shade-two;
 
-@wrap-guide-color:   @app-background-color;
-@indent-guide-color: @app-background-color;
-@invisibles-color:   @app-background-color;
+@wrap-guide-color:   @ui-background-color
+@indent-guide-color: @ui-background-color
+@invisibles-color:   @ui-background-color
 
 // Var + State Background Colors -----------------------------------------------
 @background-color-info:    @git-color-info;
@@ -51,17 +52,17 @@
 
 
 // Component Colors ------------------------------------------------------------
-@tree-view-background-color:       @app-background-color;
+@tree-view-background-color:       @ui-background-color;
 @tree-view-border-color:           @base-border-color;
 
 @tab-background-color:             @button-background-color;
 @tab-background-color-active:      @base-background-color;
-@tab-bar-background-color:         @app-background-color;
+@tab-bar-background-color:         @ui-background-color;
 @tab-bar-border-color:             @base-border-color;
 @tab-border-color:                 @base-border-color;
 @tab-text-color:                   @text-color;
 @tab-icon-color:                   @text-color;
-@tab-background-color-editor:      @ui-editor-background-color;
+@tab-background-color-editor:      @ui-background-color;
 @tab-text-color-editor:            @text-color;
 
 @pane-item-background-color:       @base-background-color;
