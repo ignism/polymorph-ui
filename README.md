@@ -12,5 +12,5 @@ A shapeshifting interface! The UI adapts to your current syntax colors.
 ![atom-light](http://i.imgur.com/ntZrqrV.png)
 
 <!--
-TODO texts, panelheading
+TODO panelheading; accent color -> text highlight
 -->
