@@ -38,6 +38,12 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
   .dialog {
     background: @overlay-background-color;
     .overlay-shadow(@ui-shadow-color);
+    -webkit-animation: overlay-show 200ms;
+
+    @-webkit-keyframes overlay-show {
+      from {opacity: 0.0;}
+      to {opacity: 1.0;}
+    }
   }
 
   .icon.x:before, .icon.file-deleted:before {

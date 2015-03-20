@@ -42,6 +42,12 @@
 .button(@color, @hover-color, @selected-color) {
   .text(normal);
   border: 1px solid @button-border-color !important;
+  &:not(:first-child) {
+    border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
+  &:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
   background: @color;
   height: @component-line-height;
   line-height: @component-line-height;
@@ -56,27 +62,33 @@
   &:hover {
     .text(highlight);
     background: @hover-color;
+    //border: 1px solid @button-border-color !important;
+    &:not(:first-child) {
+      border-left: 1px solid @ui-shadow-color !important;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid @ui-shadow-color !important;
+    }
   }
   &:active {
-    background: darken(@color, 4%);
+    background: @selected-color;
   }
   &.selected {
     .text(selected);
     background: @selected-color;
   }
-  &.selected:focus,
-  &.selected:hover {
-    //background-color: lighten(@selected-color, 2%);
-  }
 }
 
-.button-variant (@color) {
+.button-variant(@color) {
   @bg: @color;
   @hover: mix(@base-background-color, @color, 40%);
   @selected: @base-background-color;
   .button(@bg, @hover, @selected);
   color: @base-background-color;
   border-color: @color !important;
+  &:hover {
+    border: 1px solid @color !important;
+  }
 }
 
 // BOX SHADOW ------------------------------------------------------------------

@@ -3,6 +3,12 @@ atom-panel.modal {
   position: absolute;
   background-color: @overlay-background-color;
   transition: all @transition-time;
+  -webkit-animation: show 400ms;
+  @-webkit-keyframes show {
+    0% {opacity: 0.0; top: -100%;}
+    50% {opacity: 1.0; top: -100%;}
+    100% {opacity: 1.0; top: 0;}
+  }
 
   atom-text-editor {
     z-index: 1;

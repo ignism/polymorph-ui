@@ -28,11 +28,11 @@ pre {
 
 code {
   .text(info);
-  background: @base-accent-color;
+  background: @tooltip-background-color;
   border-radius: @component-border-radius/2;
 }
 
-.selected { .text(highlight); }
+//.selected { .text(highlight); }
 
 .text-smaller { font-size: 0.9em; }
 
@@ -55,9 +55,9 @@ code {
 
 
 .highlight {
-  .text(highlight);
+  .text(highlight) !important;
   text-shadow: none;
-  background-color: @background-color-highlight;
+  background-color: @tooltip-background-color;
   border-radius: @component-border-radius/2;
   padding: 1px 4px;
 }
@@ -65,7 +65,7 @@ code {
 .highlight-color(@name, @bg-color, @color) {
   .highlight-@{name} {
     .text(highlight);
-    color: @color;
+    color: mix(@text-color-highlight, @color, 56%) !important;
     text-shadow: none;
     background-color: mix(@base-background-color, @bg-color, 56%);
     border-radius: @component-border-radius/2;

@@ -2,10 +2,15 @@
   white-space: nowrap;
 
   .keystroke {
-    font-family: @font-family;
-    font-size: @font-size;
-    color: @text-color-highlight;
-    padding-left: 2px;
+    .text(info);
+    color: @tooltip-text-key-color;
+    background: @tooltip-background-key-color;
+    display: inline-block;
+    height: @component-line-height*0.8;
+    line-height: @component-line-height*0.8;
+    border-radius: @component-border-radius/2;
+    font-size: @font-size*0.8;
+    padding: 0 @component-padding / 2;
   }
 
   &.in { opacity: 1; }
@@ -13,35 +18,36 @@
   .tooltip-inner {
     line-height: @component-line-height;
     border-radius: @component-border-radius;
-    background-color: @base-accent-color;
-    .text(info);
+    background-color: @tooltip-background-color;
+    .text(highlight);
+    color: @tooltip-text-color;
     white-space: nowrap;
     max-width: none;
     .overlay-shadow(@ui-shadow-color);
   }
 
   &.top .tooltip-arrow {
-    border-top-color: @base-accent-color;
+    border-top-color: @tooltip-background-color;
   }
   &.top-left .tooltip-arrow {
-    border-top-color: @base-accent-color;
+    border-top-color: @tooltip-background-color;
   }
   &.top-right .tooltip-arrow {
-    border-top-color: @base-accent-color;
+    border-top-color: @tooltip-background-color;
   }
   &.right .tooltip-arrow {
-    border-right-color: @base-accent-color;
+    border-right-color: @tooltip-background-color;
   }
   &.left .tooltip-arrow {
-    border-left-color: @base-accent-color;
+    border-left-color: @tooltip-background-color;
   }
   &.bottom .tooltip-arrow {
-    border-bottom-color: @base-accent-color;
+    border-bottom-color: @tooltip-background-color;
   }
   &.bottom-left .tooltip-arrow {
-    border-bottom-color: @base-accent-color;
+    border-bottom-color: @tooltip-background-color;
   }
   &.bottom-right .tooltip-arrow {
-    border-bottom-color: @base-accent-color;
+    border-bottom-color: @tooltip-background-color;
   }
 }

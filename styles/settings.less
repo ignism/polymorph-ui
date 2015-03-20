@@ -11,6 +11,12 @@
 
   .config-menu {
     background-color: @gutter-background-color;
+    .nav > li > a:hover {
+      background: transparent;
+    }
+    .nav > li.active > a:hover {
+      background: @background-color-selected;
+    }
   }
 
   .sub-section .row div {
