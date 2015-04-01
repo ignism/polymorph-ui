@@ -1,7 +1,6 @@
 @import "ui-variables";
 
-
-// TEXT ------------------------------------------------------------------------
+// Text ------------------------------------------------------------------------
 .text(normal) {
   color: @text-color;
   font-family: @font-family;
@@ -38,22 +37,17 @@
   color: @text-color-error;
 }
 
-// BUTTONS ---------------------------------------------------------------------
+
+// Buttons ---------------------------------------------------------------------
 .button(@color, @hover-color, @selected-color) {
   .text(normal);
-  border: 1px solid @button-border-color !important;
-  &:not(:first-child) {
-    border-left: 1px solid rgba(0, 0, 0, 0.1) !important;
-  }
-  &:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
-  }
+
   background: @color;
   height: @component-line-height;
   line-height: @component-line-height;
   transition: background @transition-time ease;
   border-radius: @component-border-radius;
-  .input-shadow(@ui-shadow-color);
+  .input-shadow(@base-shadow-color);
 
   &:focus {
     outline: none;
@@ -62,13 +56,6 @@
   &:hover {
     .text(highlight);
     background: @hover-color;
-    //border: 1px solid @button-border-color !important;
-    &:not(:first-child) {
-      border-left: 1px solid @ui-shadow-color !important;
-    }
-    &:not(:last-child) {
-      border-right: 1px solid @ui-shadow-color !important;
-    }
   }
   &:active {
     background: @selected-color;
@@ -85,13 +72,10 @@
   @selected: @base-background-color;
   .button(@bg, @hover, @selected);
   color: @base-background-color;
-  border-color: @color !important;
-  &:hover {
-    border: 1px solid @color !important;
-  }
 }
 
-// BOX SHADOW ------------------------------------------------------------------
+
+// Box Shadow ------------------------------------------------------------------
 .overlay-shadow(@color) {
   box-shadow: 0 2px 12px 1px @color !important;
 }

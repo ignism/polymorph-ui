@@ -2,8 +2,8 @@ atom-panel.modal {
   .text(subtle);
   position: absolute;
   background-color: @overlay-background-color;
-  transition: all @transition-time;
-  -webkit-animation: show 400ms;
+  transition: all @transition-time*2;
+  -webkit-animation: show @transition-time*2;
   @-webkit-keyframes show {
     0% {opacity: 0.0; top: -100%;}
     50% {opacity: 1.0; top: -100%;}
@@ -20,7 +20,7 @@ atom-panel.modal {
   }
   .select-list ol.list-group,
   &.select-list ol.list-group {
-    background-color: @ui-background-color;
+    background-color: @app-background-color;
     border-radius: @component-border-radius;
     position: relative;
     z-index: 0;
@@ -49,7 +49,6 @@ atom-panel.modal {
         position: absolute;
         left: 0;
         right: 0;
-        transition: background @transition-time;
         height: @component-line-height + @component-padding - 1px;
         line-height: @component-line-height + @component-padding;
       }
@@ -70,7 +69,6 @@ atom-panel.modal {
           position: absolute;
           left: 0;
           right: 0;
-          transition: background @transition-time;
           height: @component-line-height*2 + @component-padding - 1px;
           line-height: @component-line-height*2 + @component-padding;
         }
@@ -111,7 +109,7 @@ atom-panel.modal {
     border: 1px solid @overlay-border-color;
     border-top: 0;
     border-radius: 0 0 @component-border-radius @component-border-radius;
-    .overlay-shadow(@ui-shadow-color);
+    .overlay-shadow(@base-shadow-color);
   }
 
   &::after {

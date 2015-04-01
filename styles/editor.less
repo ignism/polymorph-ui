@@ -1,11 +1,17 @@
-atom-text-editor[mini] {
+atom-text-editor[mini],
+atom-text-editor[mini]::shadow {
   background-color: @base-background-color;
   border-radius: @component-border-radius;
   height: @component-line-height;
   padding: 0 @component-padding 0 @component-padding;
   line-height: @component-line-height;
   font-size: @font-size;
-  .input-shadow(@ui-shadow-color);
+  .input-shadow(@base-shadow-color);
+
+  .cursor {
+    height: @component-line-height - @component-padding !important;
+    margin-top: @component-padding/2;
+  }
 }
 
 atom-text-editor,
@@ -16,7 +22,7 @@ atom-text-editor::shadow,
   }
 
   .wrap-guide {
-    background: @wrap-guide-color;
+    background: @indent-guide-color;
   }
 
   .indent-guide {
@@ -26,7 +32,7 @@ atom-text-editor::shadow,
   .bracket-matcher .region {
     border-bottom: transparent;
     box-sizing: border-box;
-    background-color: @base-accent-color;
+    background-color: @base-selection-color;
     opacity: 1.0;
   }
 
@@ -38,12 +44,8 @@ atom-text-editor::shadow,
     color: @invisibles-color;
   }
 
-  .cursor {
-    border-color: @cursor-color;
-  }
-
   .line.cursor-line {
-    background: @cursor-line-color;
+    background: transparent;
   }
 
   .gutter {
@@ -100,7 +102,6 @@ atom-text-editor::shadow,
   .fold-marker:after {
     font-weight: 600;
     color: @text-color-info;
-    background: @base-accent-color;
   }
   .fold-marker:after {
     background: transparent;

@@ -2,29 +2,30 @@
   height: @tab-bar-height + 1px;
   background: @tab-bar-background-color;
   border-bottom: 1px solid @base-border-color;
-  z-index: 1002;
+  z-index: 1003;
 
   .tab {
     .text(normal);
-    transition: background @transition-time;
+    transition: background @transition-time*2;
     height: @tab-height;
     line-height: @tab-height;
     margin-top: @component-padding + 1px;
     background: @tab-background-color;
-    border: 1px solid @tab-border-color;
-    border-bottom: 1px solid transparent;
-    margin-left: 1px;
-    margin-right: 1px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid @tab-border-color;
     border-top-right-radius: @component-border-radius;
     border-top-left-radius: @component-border-radius;
+
     &:first-child {
       margin-left: @component-padding;
       padding-left: @component-padding;
     }
+
     &:last-child {
       margin-right: @component-padding;
       padding-right: @component-padding;
     }
+
     &:hover {
       background: @button-background-color-hover;
       .text(highlight);
@@ -32,6 +33,7 @@
         display: block;
       }
     }
+
     &.modified {
       &:not(:hover) .close-icon {
         color: @text-color-modified;
@@ -48,9 +50,12 @@
         border-color: @text-color-modified;
       }
     }
+
     &.active {
       .text(highlight);
-      background: @tab-background-color-active;
+      background: @app-background-color;
+      border: 1px solid @tab-border-color;
+      border-bottom: 1px solid transparent;
 
       .title::before {
         color: @text-color-highlight;
@@ -87,9 +92,12 @@
 
       &:hover {
         color: @text-color-highlight;
-        background-color: @ui-background-color;
+        background: @base-panel-color;
       }
     }
   }
 
+  .tab.active[data-type="TextEditor"] {
+    background: @base-background-color;
+  }
 }

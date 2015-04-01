@@ -1,16 +1,15 @@
 .settings-view {
   .text(normal);
 
-  .section-container {
-    max-width: 64em;
+  .section {
+    background-color: @app-background-color;
   }
-
   .section:first-of-type {
     border-top: 0;
   }
 
   .config-menu {
-    background-color: @gutter-background-color;
+    background-color: @app-background-color;
     .nav > li > a:hover {
       background: transparent;
     }
@@ -24,24 +23,26 @@
   }
 
   .package-card {
-    background-color: @gutter-background-color !important;
+    background-color: @base-panel-color !important;
   }
 
   .package-update-view .thumbnail {
-    background-color: @gutter-background-color !important;
+    background-color: @base-panel-color !important;
   }
 
   atom-text-editor {
-    background-color: @ui-background-color !important;
+    background-color: @base-background-color !important;
     color: @text-color !important;
+    opacity: 1.0 !important;
   }
+
   .form-control {
     .button(@button-background-color, @button-background-color-hover, @button-background-color-selected);
     &:focus,
     &:hover {
       background: @background-color-highlight;
       color: @text-color-highlight;
-      .input-shadow(@ui-shadow-color);
+      .input-shadow(@base-shadow-color);
     }
   }
 }

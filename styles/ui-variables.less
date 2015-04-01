@@ -1,13 +1,18 @@
 @import "colors";
 
-// Base colors -----------------------------------------------------------------
+// Base ------------------------------------------------------------------------
+@app-background-color: @bg-shade-two;
+
 @base-background-color: @bg-shade-one;
+@base-panel-color:      @bg-shade-three;
 @base-border-color:     @bg-shade-four;
-@base-accent-color:     mix(@bg-shade-one, @color-info, 56%);
-// Text Colors -----------------------------------------------------------------
-@text-color:           @fg-shade-one;
-@text-color-subtle:    @fg-shade-two;
-@text-color-faded:     @fg-shade-two;
+@base-shadow-color:     rgba(0, 0, 0, 0.3);
+@base-selection-color:  @bg-shade-one;
+
+
+// Text ------------------------------------------------------------------------
+@text-color:           @fg-shade-two;
+@text-color-subtle:    @fg-shade-one;
 @text-color-highlight: @fg-shade-three;
 @text-color-selected:  @text-color-highlight;
 
@@ -22,95 +27,71 @@
 @text-color-modified: @text-color-warning;
 @text-color-removed:  @text-color-error;
 
-// Atom colors -----------------------------------------------------------------
-@ui-background-color: @bg-shade-three;
-@ui-shadow-color:     rgba(0, 0, 0, 0.3);
 
-@app-background-color: @bg-shade-one;
-
-@cursor-color: @text-color-highlight;
-@cursor-line-color: @bg-shade-six;
-
-@gutter-text-color:          @text-color-subtle;
-@gutter-text-color-selected: @text-color-highlight;
-@gutter-background-color:          @bg-shade-two;
-@gutter-background-color-selected: @bg-shade-two;
-
-@wrap-guide-color:   @ui-background-color;
-@indent-guide-color: @ui-background-color;
-@invisibles-color:   @ui-background-color;
-
-// Var + State Background Colors -----------------------------------------------
-@background-color-info:    @color-info;
-@background-color-success: @color-success;
-@background-color-warning: @color-warning;
-@background-color-error:   @color-error;
-
+// Background-------------------------------------------------------------------
+@background-color-info:      @color-info;
+@background-color-success:   @color-success;
+@background-color-warning:   @color-warning;
+@background-color-error:     @color-error;
 @background-color-highlight: @bg-shade-five;
-@background-color-selected:  @bg-shade-one;
+@background-color-selected:  @base-selection-color;
 
 
-// Component Colors ------------------------------------------------------------
-@tree-view-background-color:       @ui-background-color;
-@tree-view-border-color:           @base-border-color;
+// Editor ----------------------------------------------------------------------
+@indent-guide-color: @bg-shade-three;
+@invisibles-color: @bg-shade-three;
 
-@tab-background-color:             @button-background-color;
-@tab-background-color-active:      @base-background-color;
-@tab-bar-background-color:         @ui-background-color;
-@tab-bar-border-color:             @base-border-color;
-@tab-border-color:                 @base-border-color;
-@tab-text-color:                   @text-color;
-@tab-icon-color:                   @text-color;
-@tab-background-color-editor:      @ui-background-color;
-@tab-text-color-editor:            @text-color;
+@gutter-background-color: @bg-shade-two;
+@gutter-text-color: @text-color;
+@gutter-text-color-selected: @text-color-selected;
 
-@pane-item-background-color:       @base-background-color;
-@pane-item-border-color:           @base-border-color;
+// Components ------------------------------------------------------------------
+@pane-item-background-color: @base-background-color;
+@pane-item-border-color:     rgba(0, 0, 0, 0.5);
 
-@panel-heading-background-color:   @base-background-color;
-@panel-heading-border-color:       @base-border-color;
+@input-background-color: #212224;
+@input-border-color:     @base-border-color;
 
-@tool-panel-background-color:      @base-background-color;
-@tool-panel-border-color:          @base-border-color;
+@tool-panel-background-color: @base-panel-color;
+@tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color:     @base-background-color;
-@inset-panel-border-color:         @base-border-color;
+@inset-panel-background-color: #161719;
+@inset-panel-border-color:     @base-border-color;
 
-@overlay-background-color:         @bg-shade-five;
-@overlay-border-color:             @base-border-color;
-@overlay-backdrop-color:           fade(@base-background-color, 64%);
+@panel-heading-background-color: #43484d;
+@panel-heading-border-color:     fadein(@base-border-color, 10%);
 
-@badge-background-color:           @background-color-info;
+@overlay-background-color: @base-panel-color;
+@overlay-border-color:     @base-border-color;
+@overlay-backdrop-color:   fade(@base-background-color, 64%);
 
-@button-background-color:          @base-border-color;
+@button-background-color:          @bg-shade-four;
 @button-background-color-hover:    @background-color-highlight;
-@button-background-color-selected: @base-background-color;
-@button-text-color-selected:       @text-color-selected;
+@button-background-color-selected: #5c6064;
 @button-border-color:              @base-border-color;
-@button-border-color-selected:     @base-accent-color;
 
-@input-border-color:               @base-border-color;
-@input-background-color:           @base-background-color;
-@input-background-color-focus:     @base-background-color;
-@input-selection-color:            @background-color-highlight;
-@input-selection-color-focus:      @background-color-highlight;
+@tab-bar-background-color:    @base-panel-color;
+@tab-bar-border-color:        @base-border-color;
+@tab-background-color:        @base-panel-color;
+@tab-background-color-active: @base-background-color;
+@tab-border-color:            @base-border-color;
 
-@tooltip-background-color:         @ui-selection;
-@tooltip-text-color:               @text-color-highlight;
-@tooltip-text-key-color:           @text-color-info;
-@tooltip-background-key-color:     @base-accent-color;
+@tree-view-background-color: @base-panel-color;
+@tree-view-border-color:     @base-border-color;
 
-@progress-background-color:        @base-accent-color;
+@scrollbar-background-color: #222425; // Needs to be opaque
+@scrollbar-color:            rgba(92, 92, 92, 0.5);
 
-@checkbox-background-color:        @base-background-color;
+@tooltip-text-color: @text-color-highlight;
+@tooltip-background-color: @background-color-highlight;
+@tooltip-text-key-color: @base-background-color;
+@tooltip-background-key-color: @background-color-info;
 
-@scrollbar-color:                  @button-background-color;
-@scrollbar-background-color:       transparent;
-
-
-// Utilities
-@key-binding-border-color:     @base-border-color;
-@key-binding-background-color: @base-accent-color;
+@ui-site-color-1: @background-color-success; // green
+@ui-site-color-2: @background-color-info; // blue
+@ui-site-color-3: @background-color-warning; // orange
+@ui-site-color-4: #db2ff4; // purple
+@ui-site-color-5: #f5e11d; // yellow
 
 
 // Sizes -----------------------------------------------------------------------
@@ -119,16 +100,15 @@
 
 @disclosure-arrow-size: 12px;
 
-@component-padding:      8px;
+@component-padding:       8px;
 @component-icon-padding:  4px;
-@component-icon-size:    16px;
-@component-line-height:  24px;
+@component-icon-size:     16px;
+@component-line-height:   24px;
 @component-border-radius: 4px;
 
 @tab-height: 32px;
-@tab-bar-height: 40px;
+@tab-bar-height: @tab-height + @component-padding;
 
-@transition-time: 400ms;
-
-// Font ------------------------------------------------------------------------
+// Other -----------------------------------------------------------------------
 @font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+@transition-time: 200ms;

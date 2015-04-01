@@ -1,10 +1,7 @@
 .list-group .list-item,
 .list-tree .list-item {
   .text(normal);
-  transition: background @transition-time;
   background: transparent;
-  height: @component-line-height;
-  line-height: @component-line-height;
 
   &.status-added { .text(success); }
   &.status-ignored { .text(subtle); }
@@ -16,7 +13,6 @@
     color: @text-color-highlight;
   }
   &.selected {
-    transition: color @transition-time linear;
     color: @text-color-selected;
   }
 }
@@ -24,7 +20,7 @@
 .select-list.popover-list {
   background: @overlay-background-color;
   padding: @component-padding/2 0 @component-padding/2 0;
-  .overlay-shadow(@ui-shadow-color);
+  .overlay-shadow(@base-shadow-color);
   border-radius: @component-border-radius;
   atom-text-editor[mini] {
     margin-bottom: @component-padding;
@@ -33,7 +29,6 @@
     position: relative;
   }
   .list-group li {
-    transition: background @transition-time;
     padding: 0 @component-padding*2 0 @component-padding*2;
     &::before {
       content: '';

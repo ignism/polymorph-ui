@@ -1,7 +1,7 @@
 // minimap
 atom-text-editor::shadow atom-text-editor-minimap::shadow .minimap-visible-area,
 atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
-  background-color: @cursor-line-color;
+  background-color: @gutter-background-color;
   opacity: 1.0;
 }
 
@@ -9,7 +9,7 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
 #ColorPicker {
   background: @overlay-background-color !important;
   border-radius: @component-border-radius;
-  .overlay-shadow(@ui-shadow-color);
+  .overlay-shadow(@base-shadow-color);
 }
 
 .ColorPicker-picker {
@@ -31,14 +31,10 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
 
 // git-control
 .git-control {
-  .sidebar {
-    background: @gutter-background-color;
-  }
-
   .dialog {
     background: @overlay-background-color;
-    .overlay-shadow(@ui-shadow-color);
-    -webkit-animation: overlay-show 200ms;
+    .overlay-shadow(@base-shadow-color);
+    -webkit-animation: overlay-show @transition-time;
 
     @-webkit-keyframes overlay-show {
       from {opacity: 0.0;}
@@ -50,32 +46,3 @@ atom-text-editor atom-text-editor-minimap::shadow .minimap-visible-area {
     content: '✕';
   }
 }
-
-/*
-//depracation-cop
-.deprecation-cop {
-
-  .list-item {
-    .text(normal);
-    transition: none;
-    background: transparent;
-    height: inherit;
-    line-height: inherit;
-
-    &::before, {
-      background: transparent;
-      transition: none;
-    }
-
-    &:hover {
-      color: @text-color-highlight;
-      &:not(.header)::before {
-        background: transparent;
-      }
-    }
-    &.selected::before {
-      content: inherit;
-    }
-  }
-}
-*/

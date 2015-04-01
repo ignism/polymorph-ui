@@ -1,13 +1,9 @@
 atom-panel {
   .text(normal);
 
-  &.top, &.bottom, &.left, &.right {
-    background: @ui-background-color !important;
-  }
-
   &.right {
-    border-left: 1px solid @base-border-color;
     margin-top: @tab-bar-height;
+    border-left: 1px solid @base-border-color;
     border-top: 1px solid @base-border-color;
   }
 
@@ -15,17 +11,17 @@ atom-panel {
     border-top: 1px solid @base-border-color;
   }
 }
-
 atom-panel-container {
+  background: @base-panel-color;
   border: 0;
 }
 
 .focusable-panel {
+  background: @base-panel-color;
   padding: @component-padding;
-  background: @ui-background-color;
 }
 
 .item-views .focusable-panel {
+  background: @base-panel-color;
   padding: @component-padding;
-  background: @app-background-color;
 }
