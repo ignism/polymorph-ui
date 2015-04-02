@@ -45,11 +45,12 @@
 @gutter-text-color: @text-color;
 @gutter-text-color-selected: @text-color-selected;
 
-// Components ------------------------------------------------------------------
-@pane-item-background-color: @base-background-color;
-@pane-item-border-color:     rgba(0, 0, 0, 0.5);
 
-@input-background-color: #212224;
+// Components ------------------------------------------------------------------
+@pane-item-background-color: @app-background-color;
+@pane-item-border-color:     @base-border-color;
+
+@input-background-color: @base-background-color;
 @input-border-color:     @base-border-color;
 
 @tool-panel-background-color: @base-panel-color;
@@ -58,7 +59,7 @@
 @inset-panel-background-color: #161719;
 @inset-panel-border-color:     @base-border-color;
 
-@panel-heading-background-color: #43484d;
+@panel-heading-background-color: @app-background-color;
 @panel-heading-border-color:     fadein(@base-border-color, 10%);
 
 @overlay-background-color: @base-panel-color;
@@ -67,7 +68,7 @@
 
 @button-background-color:          @bg-shade-four;
 @button-background-color-hover:    @background-color-highlight;
-@button-background-color-selected: #5c6064;
+@button-background-color-selected: @base-selection-color;
 @button-border-color:              @base-border-color;
 
 @tab-bar-background-color:    @base-panel-color;
@@ -79,19 +80,19 @@
 @tree-view-background-color: @base-panel-color;
 @tree-view-border-color:     @base-border-color;
 
-@scrollbar-background-color: #222425; // Needs to be opaque
+@scrollbar-background-color: @app-background-color; // Needs to be opaque
 @scrollbar-color:            rgba(92, 92, 92, 0.5);
 
-@tooltip-text-color: @text-color-highlight;
-@tooltip-background-color: @background-color-highlight;
-@tooltip-text-key-color: @base-background-color;
+@tooltip-text-color:           @text-color-highlight;
+@tooltip-background-color:     @background-color-highlight;
+@tooltip-text-key-color:       @base-background-color;
 @tooltip-background-key-color: @background-color-info;
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
 @ui-site-color-3: @background-color-warning; // orange
-@ui-site-color-4: #db2ff4; // purple
-@ui-site-color-5: #f5e11d; // yellow
+@ui-site-color-4: mix(@color-error, @color-info, 50%); // purple
+@ui-site-color-5: mix(@color-error, @color-success, 50%); // yellow
 
 
 // Sizes -----------------------------------------------------------------------

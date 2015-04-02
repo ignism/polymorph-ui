@@ -32,7 +32,7 @@ atom-text-editor::shadow,
   .bracket-matcher .region {
     border-bottom: transparent;
     box-sizing: border-box;
-    background-color: @base-selection-color;
+    background-color: @ui-selection;
     opacity: 1.0;
   }
 
@@ -49,7 +49,7 @@ atom-text-editor::shadow,
   }
 
   .gutter {
-    font-weight: 300;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     background-color: @gutter-background-color;
     margin-right: @component-padding/2;
@@ -66,12 +66,25 @@ atom-text-editor::shadow,
       opacity: 1.0;
 
       color: @gutter-text-color;
-      padding-left: 8px;
+      border-left: 2px solid transparent;
+      padding-left: @component-padding !important;
       padding-right: 0;
 
-      &.git-line-added { border-left-color: @text-color-added; }
-      &.git-line-modified { border-left: 2px solid @text-color-modified; }
-      &.git-line-removed { border-left-color: @text-color-removed; }
+      &.git-line-added {
+        font-weight: 600;
+        color: @text-color-added;
+        border-left-color: @text-color-added;
+      }
+      &.git-line-modified {
+        font-weight: 600;
+        color: @text-color-modified;
+        border-left-color: @text-color-modified;
+      }
+      &.git-line-removed {
+        font-weight: 600;
+        color: @text-color-removed;
+        border-left-color: @text-color-removed;
+      }
 
       &.cursor-line {
         font-weight: 600;
@@ -102,6 +115,7 @@ atom-text-editor::shadow,
   .fold-marker:after {
     font-weight: 600;
     color: @text-color-info;
+    border-left-color: @text-color-info;
   }
   .fold-marker:after {
     background: transparent;
