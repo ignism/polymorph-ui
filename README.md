@@ -6,7 +6,7 @@ A shapeshifting interface! The UI adapts to your current syntax colors.
 
 * It's flexible: The UI will search for colors within "syntax-variables.less", it will then use these colors to calculate the UI colors.
 * Works with light and dark syntax colors.
-* gives a clean and consistent feel.
+* Gives a clean and consistent feel.
 
 #### Dark
 ![monokai](http://i.imgur.com/sgztCJP.png)
