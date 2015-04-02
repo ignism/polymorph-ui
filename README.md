@@ -2,15 +2,21 @@
 
 A shapeshifting interface! The UI adapts to your current syntax colors.
 
-### Features
+## Features
 
-* Flexible UI - The UI will search for colors within "syntax-variables.less", it will then use these colors to calculate the UI colors.
+* It's flexible: The UI will search for colors within "syntax-variables.less", it will then use these colors to calculate the UI colors.
 * Works with light and dark syntax colors.
+* gives a clean and consistent feel.
 
-![monokai](http://i.imgur.com/DyrExSL.png)
+#### Dark
+![monokai](http://i.imgur.com/sgztCJP.png)
 
-![atom-light](http://i.imgur.com/ntZrqrV.png)
+#### Light
+![monokai-light](http://i.imgur.com/827xZzc.png)
 
-<!--
-TODO panelheading; accent color -> text highlight
--->
+#### Addons used in screenshots
+* [minimap](https://atom.io/packages/minimap)
+* [symbols-tree-view](https://atom.io/packages/symbols-tree-view)
+* [file-icons](https://atom.io/packages/file-icons)
+* [monokai](https://atom.io/packages/monokai)
+* [monokai-light](https://atom.io/packages/monokai-light)
