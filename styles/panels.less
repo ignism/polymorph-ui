@@ -1,13 +1,13 @@
 atom-panel {
   .text(normal);
 
-  &.right {
+  &.right:not(:empty) {
+    border-top: 1px solid @base-border-color;
     margin-top: @tab-bar-height;
     border-left: 1px solid @base-border-color;
-    border-top: 1px solid @base-border-color;
   }
 
-  &.bottom {
+  &.bottom:not(:empty) {
     border-top: 1px solid @base-border-color;
   }
 }
