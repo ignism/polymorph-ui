@@ -20,3 +20,5 @@ A shapeshifting interface! The UI adapts to your current syntax colors.
 * [file-icons](https://atom.io/packages/file-icons)
 * [monokai](https://atom.io/packages/monokai)
 * [monokai-light](https://atom.io/packages/monokai-light)
+
+<!-- TODO color tweak -->
