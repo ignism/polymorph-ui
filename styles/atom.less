@@ -3,7 +3,7 @@
 }
 
 atom-workspace {
-  background: @app-background-color;
+  background: @tool-panel-background-color;
   font-family: @font-family;
 
   .item-views {
@@ -16,7 +16,7 @@ label {
 }
 
 atom-notifications {
-  z-index: 2001;
+  z-index: 4001;
 
   atom-notification {
     .close.icon::before {
@@ -47,7 +47,7 @@ atom-pane-container atom-pane .item-views {
 }
 
 .background-message * {
-  color: @base-shadow-color;
+  color: @overlay-shadow-color;
   font-size: 24px;
 }
 

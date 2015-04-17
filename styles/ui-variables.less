@@ -3,12 +3,13 @@
 // Base ------------------------------------------------------------------------
 @app-background-color: @bg-shade-two;
 
-@base-background-color: @bg-shade-one;
-@base-panel-color:      @bg-shade-three;
-@base-border-color:     @bg-shade-four;
-@base-shadow-color:     rgba(0, 0, 0, 0.3);
+@base-background-color: @bg-shade-two;
+@base-border-color:     @bg-shade-five;
 @base-selection-color:  @bg-shade-one;
+@base-input-color:      @bg-shade-one;
 
+@overlay-shadow-color: rgba(0, 0, 0, 0.2);
+@input-shadow-color:   rgba(0, 0, 0, 0.4);
 
 // Text ------------------------------------------------------------------------
 @text-color:           @fg-shade-two;
@@ -41,8 +42,8 @@
 @indent-guide-color: @bg-shade-three;
 @invisibles-color: @bg-shade-three;
 
-@gutter-background-color: @bg-shade-two;
-@gutter-text-color: @text-color;
+@gutter-background-color: transparent;
+@gutter-text-color: @text-color-subtle;
 @gutter-text-color-selected: @text-color-selected;
 
 
@@ -53,8 +54,8 @@
 @input-background-color: @base-background-color;
 @input-border-color:     @base-border-color;
 
-@tool-panel-background-color: @base-panel-color;
-@tool-panel-border-color:     @base-border-color;
+@tool-panel-background-color: @bg-shade-four;
+@tool-panel-border-color:     @bg-shade-five;
 
 @inset-panel-background-color: #161719;
 @inset-panel-border-color:     @base-border-color;
@@ -62,22 +63,22 @@
 @panel-heading-background-color: @app-background-color;
 @panel-heading-border-color:     fadein(@base-border-color, 10%);
 
-@overlay-background-color: @base-panel-color;
+@overlay-background-color: @tool-panel-background-color;
 @overlay-border-color:     @base-border-color;
 @overlay-backdrop-color:   fade(@base-background-color, 64%);
 
-@button-background-color:          @bg-shade-four;
+@button-background-color:          @bg-shade-one;
 @button-background-color-hover:    @background-color-highlight;
 @button-background-color-selected: @base-selection-color;
 @button-border-color:              @base-border-color;
 
-@tab-bar-background-color:    @base-panel-color;
-@tab-bar-border-color:        @base-border-color;
-@tab-background-color:        @base-panel-color;
+@tab-bar-background-color:    @tool-panel-background-color;
+@tab-bar-border-color:        @tool-panel-border-color;
+@tab-background-color:        @tool-panel-background-color;
 @tab-background-color-active: @base-background-color;
-@tab-border-color:            @base-border-color;
+@tab-border-color:            transparent;
 
-@tree-view-background-color: @base-panel-color;
+@tree-view-background-color: @bg-shade-three;
 @tree-view-border-color:     @base-border-color;
 
 @scrollbar-background-color: @app-background-color; // Needs to be opaque

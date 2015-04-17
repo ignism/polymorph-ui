@@ -23,11 +23,11 @@
   }
 
   .package-card {
-    background-color: @base-panel-color !important;
+    background-color: @tool-panel-background-color !important;
   }
 
   .package-update-view .thumbnail {
-    background-color: @base-panel-color !important;
+    background-color: @tool-panel-background-color !important;
   }
 
   atom-text-editor {
@@ -37,12 +37,13 @@
   }
 
   .form-control {
+    border: 0;
     .button(@button-background-color, @button-background-color-hover, @button-background-color-selected);
     &:focus,
     &:hover {
       background: @background-color-highlight;
       color: @text-color-highlight;
-      .input-shadow(@base-shadow-color);
+      .input-shadow();
     }
   }
 }

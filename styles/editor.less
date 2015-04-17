@@ -1,12 +1,12 @@
 atom-text-editor[mini],
 atom-text-editor[mini]::shadow {
-  background-color: @base-background-color;
+  background-color: @base-input-color;
   border-radius: @component-border-radius;
   height: @component-line-height;
   padding: 0 @component-padding 0 @component-padding;
   line-height: @component-line-height;
   font-size: @font-size;
-  .input-shadow(@base-shadow-color);
+  .input-shadow();
 
   .cursor {
     height: @component-line-height - @component-padding !important;
@@ -49,10 +49,10 @@ atom-text-editor::shadow,
   }
 
   .gutter {
-    font-weight: 400;
+    font-weight: 300;
     -webkit-font-smoothing: antialiased;
     background-color: @gutter-background-color;
-    margin-right: @component-padding/2;
+    margin-right: 0;
     border-right: 0;
     padding-right: 0;
 

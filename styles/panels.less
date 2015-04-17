@@ -1,18 +1,27 @@
 atom-panel {
   .text(normal);
+  background: @tool-panel-background-color;
 
-  &.right:not(:empty) {
+  &.left:not(:empty) {
+    border-right: 1px solid @tool-panel-border-color;
     border-top: 1px solid @base-border-color;
     margin-top: @tab-bar-height;
-    border-left: 1px solid @base-border-color;
   }
 
-  &.bottom:not(:empty) {
+  &.right:not(:empty) {
+    border-left: 1px solid @tool-panel-border-color;
     border-top: 1px solid @base-border-color;
+    margin-top: @tab-bar-height;
+  }
+  &.top:not(:empty) {
+    border-bottom: 0;
+  }
+  &.bottom:not(:empty) {
+    border-top: 1px solid @tool-panel-border-color;
   }
 }
 atom-panel-container {
-  background: @base-panel-color;
+  background: @tool-panel-background-color;
   border: 0;
 }
 

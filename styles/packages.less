@@ -2,7 +2,7 @@
 #ColorPicker {
   background: @overlay-background-color !important;
   border-radius: @component-border-radius;
-  .overlay-shadow(@base-shadow-color);
+  .overlay-shadow();
 }
 
 .ColorPicker-picker {
@@ -26,7 +26,7 @@
 .git-control {
   .dialog {
     background: @overlay-background-color;
-    .overlay-shadow(@base-shadow-color);
+    .overlay-shadow();
     -webkit-animation: overlay-show @transition-time;
 
     @-webkit-keyframes overlay-show {
@@ -47,7 +47,7 @@
 
 // toolbar ---------------------------------------------------------------------
 #toolbar {
-  background-color: @base-panel-color;
+  background-color: @tool-panel-background-color;
   line-height: @tab-bar-height;
   z-index: 1003;
 
@@ -68,6 +68,7 @@
 
   &.left {
     width: @tab-bar-height + 1;
+    border-right: 0;
   }
 
   &.horizontal {

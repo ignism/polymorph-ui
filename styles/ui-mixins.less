@@ -47,21 +47,21 @@
   line-height: @component-line-height;
   transition: background @transition-time ease;
   border-radius: @component-border-radius;
-  .input-shadow(@base-shadow-color);
+  .input-shadow();
 
   &:focus {
     outline: none;
   }
   &:focus,
   &:hover {
-    .text(highlight);
+    color: @text-color-highlight;
     background: @hover-color;
   }
   &:active {
     background: @selected-color;
   }
   &.selected {
-    .text(selected);
+    color: @text-color-selected;
     background: @selected-color;
   }
 }
@@ -76,10 +76,10 @@
 
 
 // Box Shadow ------------------------------------------------------------------
-.overlay-shadow(@color) {
-  box-shadow: 0 2px 12px 1px @color !important;
+.overlay-shadow() {
+  box-shadow: 0  12px 48px 0 @overlay-shadow-color !important;
 }
 
-.input-shadow(@color) {
-  box-shadow:0 0.5px 0 0 @color !important;
+.input-shadow() {
+  box-shadow:0 1px 1px -1px @input-shadow-color !important;
 }
