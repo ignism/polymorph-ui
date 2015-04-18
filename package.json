@@ -2,7 +2,7 @@
   "name": "polymorph-ui",
   "theme": "ui",
   "main": "./lib/polymorph-ui",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "A minimal and shapeshifting interface.",
   "activationCommands": {
     "atom-workspace": "polymorph-ui:toggle"
