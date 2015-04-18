@@ -1,6 +1,6 @@
 # polymorph-ui package
 
-A shapeshifting interface! The UI adapts to your current syntax colors.
+A minimal and shapeshifting interface! The UI adapts to your current syntax colors.
 
 ## Features
 
@@ -9,16 +9,15 @@ A shapeshifting interface! The UI adapts to your current syntax colors.
 * Gives a clean and consistent feel.
 
 #### Dark
-![monokai](http://i.imgur.com/sgztCJP.png)
+![adventurous](http://i.imgur.com/oqaW46z.png)
 
 #### Light
-![monokai-light](http://i.imgur.com/827xZzc.png)
+![monokai-light](http://i.imgur.com/0PbseGA.png)
 
 #### Addons used in screenshots
 * [minimap](https://atom.io/packages/minimap)
 * [symbols-tree-view](https://atom.io/packages/symbols-tree-view)
 * [file-icons](https://atom.io/packages/file-icons)
-* [monokai](https://atom.io/packages/monokai)
+* [toolbar](https://atom.io/packages/toolbar)
+* [adventurous](https://atom.io/packages/adventurous-syntax)
 * [monokai-light](https://atom.io/packages/monokai-light)
-
-<!-- TODO color tweak -->

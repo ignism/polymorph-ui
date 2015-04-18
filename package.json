@@ -3,7 +3,7 @@
   "theme": "ui",
   "main": "./lib/polymorph-ui",
   "version": "1.8.1",
-  "description": "A short description of your package",
+  "description": "A minimal and shapeshifting interface.",
   "activationCommands": {
     "atom-workspace": "polymorph-ui:toggle"
   },
