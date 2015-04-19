@@ -68,8 +68,8 @@
 
 .button-variant(@color) {
   @bg: @color;
-  @hover: mix(@base-background-color, @color, 40%);
-  @selected: @base-background-color;
+  @hover: mix(@button-background-color-hover, @color, 40%);
+  @selected: mix(@button-background-color-selected, @color, 40%);
   .button(@bg, @hover, @selected);
   color: @base-background-color;
 }
