@@ -1,6 +1,5 @@
 atom-workspace {
   .tree-view-resizer {
-    //margin-top: -@tab-bar-height;
     background-color: @tree-view-background-color;
     overflow: visible;
   }
@@ -17,13 +16,10 @@ atom-workspace {
     }
     & > .directory {
       & > .header {
-        //background: @tool-panel-background-color;
-        //border-bottom: 1px solid @base-border-color;
         line-height: @tab-height;
         width: 100%;
         height: @tab-bar-height;
-        padding-top: 8px;
-        //position: fixed;
+        padding-top: @component-padding/2;
         z-index: 2000;
         font-weight: bold;
         color: @text-color-highlight;
@@ -32,11 +28,14 @@ atom-workspace {
           visibility: hidden;
         }
       }
-
       & > .entries {
-        //padding-top: @tab-bar-height + @component-padding;
+        padding-bottom: @component-padding;
+      }
+    }
+    & > .directory:not(:first-child) {
+      & > .header {
+        border-top: 1px solid @base-border-color;
       }
     }
   }
-
 }
